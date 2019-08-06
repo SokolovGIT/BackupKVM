@@ -11,9 +11,9 @@ vm_list=`virsh list | grep running | awk '{print $2}'`
 # Log File
 logfile="/var/log/kvmbackup.log"
 
-# Использовать это условие, если список VM задается вручную
 # Use this condition for choosing VM directly.
 #for activevm in "${vm_list[@]}";
+
 # Use this construction for all working VM
 for activevm in $vm_list
 
