@@ -42,7 +42,7 @@ for activevm in $vm_list
 	    done
 	for disk in $disk_list
 	            do
-	                # Определяем путь до снепшота
+	                # Finding the path to snapshot
 	                snap_path=`virsh domblklist $activevm | grep $disk | awk '{print $2}'`
 	                echo "`date +"%Y-%m-%d_%H-%M-%S"` Commit snapshot $activevm $snap_path" >> $logfile
 	                # Combine snapshots
