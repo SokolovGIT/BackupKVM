@@ -36,7 +36,7 @@ for activevm in $vm_list
 		echo "`date +"%Y-%m-%d_%H-%M-%S"` Create backup $activevm $path" >> $logfile
 		# Filename of the path
 		filename=`basename $path`
-		# Бэкапим диск
+		# Backuping disk
 		pigz -c $path > $backup_dir/$activevm/$filename.gz
 		sleep 2
 	    done
